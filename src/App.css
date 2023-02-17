@@ -1,15 +1,20 @@
+*{
+  /* border: 1px solid white; */
+}
+
 .App {
-  text-align: center;
+  text-align: center; 
+  color: white;
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 120s linear;
   }
 }
 
@@ -35,4 +40,111 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.space-container{
+  height: 0%;  
+  width: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  
+}
+
+.space-background {
+  z-index: -100;
+  position: absolute;
+  height: 350vh;
+  width: 250vh;
+
+  background-color: black;
+
+  background-image: url("../public/space.png");
+  background-repeat: repeat;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* border: 1px solid green; */
+
+}
+
+
+.news-container{
+  width: 100%;
+
+  /* border: 1px solid red; */
+
+}
+
+.news-header{
+  color: white;
+
+}
+
+.news-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  /* border: 1px solid red; */
+
+}
+
+.news-items{
+  height: 100%;
+  width: 70%;
+
+  /* border: 1px solid white; */
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+
+}
+
+
+.sport-scores{
+  height: 100%;
+  width: 30%;
+
+  /* border: 1px solid white; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
+
+ul{
+  list-style-type: none;
+}
+
+.news-item{
+
+  height: 25%;
+  width: 100%;
+
+  /* border: 1px solid white; */
+ 
+
 }
