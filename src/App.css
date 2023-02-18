@@ -1,5 +1,7 @@
 *{
   /* border: 1px solid white; */
+  text-align: center; 
+
 }
 
 .App {
@@ -108,7 +110,7 @@
 
 .news-items{
   height: 100%;
-  width: 70%;
+  width: 60%;
 
   /* border: 1px solid white; */
 
@@ -119,24 +121,6 @@
   align-items: flex-start;
   
 
-}
-
-
-.sport-scores{
-  height: 100%;
-  width: 30%;
-
-  /* border: 1px solid white; */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  
-}
-
-ul{
-  list-style-type: none;
 }
 
 .news-item{
@@ -147,4 +131,39 @@ ul{
   /* border: 1px solid white; */
  
 
+}
+
+.sport-scores{
+  height: 100%;
+  width: 40%;
+
+  /* border: 1px solid white; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.sport-match{
+  width: 100%;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-left{
+  width: 45%;
+  text-align: right;
+}
+.score-middle{
+  width: 10%;
+  text-align: center;
+}.score-right{
+  width: 45%;
+  text-align: left;
 }
