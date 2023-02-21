@@ -6,29 +6,29 @@ function App() {
 
   const [scores, setScores] = useState (
     [
-      {team:"Old Earth", score: 0},
-      {team:"Newholme", score: 0},
-      {team:"Baldur", score: 0},
-      {team:"O' Poseidon", score: 0},
-      {team:"N' Pittsburg", score: 0},
-      {team:"Greywater", score: 0},
+      {team:"Old Earth", goals: 0},
+      {team:"Newholme", goals: 0},
+      {team:"Baldur", goals: 0},
+      {team:"O' Poseidon", goals: 0},
+      {team:"N' Pittsburg", goals: 0},
+      {team:"Greywater", goals: 0},
 
-      {team:"Avalon", score: 0},
-      {team:"Jamison's", score: 0},
-      {team:"Old Hranga", score: 0},
-      {team:"Prometheus", score: 0},
-      {team:"Thisrock", score: 0},
-      {team:"Rhiannon", score: 0},
+      {team:"Avalon", goals: 0},
+      {team:"Jamison's", goals: 0},
+      {team:"Old Hranga", goals: 0},
+      {team:"Prometheus", goals: 0},
+      {team:"Thisrock", goals: 0},
+      {team:"Rhiannon", goals: 0},
 
-      {team:"Kimdiss", score: 0},
-      {team:"High Kav'", score: 0},
-      {team:"Darkdawn", score: 0},
-      {team:"Worlorn", score: 0},
+      {team:"Kimdiss", goals: 0},
+      {team:"High Kav'", goals: 0},
+      {team:"Darkdawn", goals: 0},
+      {team:"Worlorn", goals: 0},
 
-      {team:"S'uthlam", score: 0},
-      {team:"Greyrest", score: 0},
-      {team:"Shkea", score: 0},
-      {team:"C'dhenni", score: 0},
+      {team:"S'uthlam", goals: 0},
+      {team:"Greyrest", goals: 0},
+      {team:"Shkea", goals: 0},
+      {team:"C'dhenni", goals: 0},
     ]
   );
   
@@ -39,11 +39,27 @@ function App() {
   const team2 = ["Shkeen", 2];
   
   const handleUpdate = () => {
-    let newScore = (scores[0].score) ++;
-    //console.log(newScore)
-    setScores({
-      ...scores, 
-      score: newScore});
+    // let newScore = (scores[0].score) ++;
+    // //console.log(newScore)
+    // setScores({
+    //   ...scores, 
+    //   score: newScore});
+
+    const newScores = scores.map((score, index) => {
+
+      let newScore = {team : score.team, goals: score.goals};
+      //console.log(newScore)
+
+      // Returns a random integer from 0 to 9:
+      let myRand = Math.floor(Math.random() * 2);
+      //console.log(myRand)
+      if(myRand == 1){
+        ++newScore.goals;
+      }
+      return newScore;        
+    });
+    //console.log(newScores)
+    setScores(newScores);
   }
   
   useEffect(() => {
@@ -51,11 +67,11 @@ function App() {
 
       // timer count check for 90s if -> then
       // -> reset all scores
-
       // use randomiser for chance for a team to score every minute
       // low chance
+      
 
-      console.log("timer trigger")
+      //console.log("timer trigger")
       handleUpdate();
     }, 1000);  
     return () => clearInterval(interval);
